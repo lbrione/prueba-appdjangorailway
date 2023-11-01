@@ -7,3 +7,10 @@ def index(req):
 
 def form(req):
   return render(req, 'formulario.html')
+
+
+def appvite1(req):
+  return render(req, 'pagina1/index.html')
+
+def appvite2(req):
+  return render(req, 'pagina2/index.html')

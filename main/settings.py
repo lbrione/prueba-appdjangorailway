@@ -76,7 +76,9 @@ ROOT_URLCONF = 'main.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'contador', 'pages')
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -139,7 +141,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'contador/static')]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'contador/static'),
+    os.path.join(BASE_DIR, 'contador/pages')
+]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 print(f"6 --> Variable staticfiles_dirs: {STATICFILES_DIRS}")
 print(f"7 --> Variable static_root: {STATIC_ROOT}")
