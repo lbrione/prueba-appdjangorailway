@@ -31,19 +31,19 @@ print("1 --> Clave secreta:" + SECRET_KEY)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
-DEBUG = 'RAILWAY' not in os.environ
+DEBUG = 'RAILWAY_ENVIRONMENT' not in os.environ
 print(f"2 --> Entorno de railway: {os.environ}")
 print(f"3 --> Variable debug: {DEBUG}")
 
 
 ALLOWED_HOSTS = []
 
-NAME_HOST = os.environ.get('RAILWAY_HOST')
-if NAME_HOST:
-    ALLOWED_HOSTS.append(NAME_HOST)
+RAILWAY_PUBLIC_DOMAIN = os.environ.get('RAILWAY_PUBLIC_DOMAIN')
+if RAILWAY_PUBLIC_DOMAIN:
+    ALLOWED_HOSTS.append(RAILWAY_PUBLIC_DOMAIN)
 
 print(f"4 --> Variable allowed_hosts: {ALLOWED_HOSTS}")
-print(f"5 --> Variable name_host: {NAME_HOST}")
+print(f"5 --> Variable name_host: {RAILWAY_PUBLIC_DOMAIN}")
 
 
 
