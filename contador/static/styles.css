@@ -1,0 +1,93 @@
+body {
+  background-color: #091022;
+  color: #fff;
+}
+
+.form {
+  display: grid;
+  gap: 20px;
+  background-color: #293552;
+  width: min(350px, 90%);
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #0005;
+}
+
+.form__div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form__icon {
+  font-size: 50px;
+}
+
+.form__title {
+  margin-top: 10px;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.form__inputs {
+  display: grid;
+  gap: 10px;
+}
+
+.form__label {
+  width: 100%;
+  margin-bottom: 2px;
+  font-weight: 500;
+}
+
+.form__input {
+  height: 35px;
+  width: 100%;
+  border-radius: 4px;
+  padding: 0 10px;
+  outline: none;
+  background-color: #4f5e8c;
+  color: #ffffff;
+  border: 2px solid transparent;
+}
+
+.form__input:hover {
+  border-color: #ffffff;
+}
+
+.form__input:focus {
+  border-color: #ffffff;
+}
+
+.form__cta {
+  background-color: #3972ce;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.form__cta:hover {
+  background-color: #4b8ef9;
+}
+.form__cta:active {
+  background-color: #3972ce;
+}
+
+
+
+
+/* Show password */
+.form__input--pw:has(.form__input:focus) {
+  border-color: #fff;
+}
+
+.form__input--pw {
+  padding: 0;
+  display: flex;
+}
+
+.form__input-in {
+  border: none;
+  height: 100%;
+}
+
